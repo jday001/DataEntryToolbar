@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'DataEntryToolbar', :exclusive => true do
+  pod "DataEntryToolbar", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "DataEntryToolbar", :path => "../"
+
+  pod 'Specta', :git => 'https://github.com/specta/specta.git', :tag => 'v0.3.0.beta1'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
