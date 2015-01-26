@@ -12,6 +12,7 @@ install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 script:
 #- set -o pipefail && xcodebuild test -workspace Example/DataEntryToolbar.xcworkspace -#scheme DataEntryToolbar-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
-- set -o pipefail && xcodebuild -workspace Example/DataEntryToolbar.xcworkspace -scheme DataEntryToolbar-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#- set -o pipefail && xcodebuild -workspace Example/DataEntryToolbar.xcworkspace -scheme #DataEntryToolbar-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool -workspace Example/DataEntryToolbar.xcworkspace -scheme DataEntryToolbar-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
 
 - pod lib lint --quick
