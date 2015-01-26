@@ -1,6 +1,6 @@
 # DataEntryToolbar
 
-[![CI Status](http://img.shields.io/travis/jeff/DataEntryToolbar.svg?style=flat)](https://travis-ci.org/jday001/DataEntryToolbar)
+[![CI Status](https://travis-ci.org/jday001/DataEntryToolbar.svg?branch=master)](https://travis-ci.org/jday001/DataEntryToolbar)
 [![Version](https://img.shields.io/cocoapods/v/DataEntryToolbar.svg?style=flat)](http://cocoadocs.org/docsets/DataEntryToolbar)
 [![License](https://img.shields.io/cocoapods/l/DataEntryToolbar.svg?style=flat)](http://cocoadocs.org/docsets/DataEntryToolbar)
 [![Platform](https://img.shields.io/cocoapods/p/DataEntryToolbar.svg?style=flat)](http://cocoadocs.org/docsets/DataEntryToolbar)
