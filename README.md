@@ -14,7 +14,7 @@ DataEntryToolbar is a subclass of UIToolbar intended for use as the input access
 
     private lazy var dataEntryToolbar: DataEntryToolbar? = {
         if let dataEntryToolbar = DataEntryToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 44), table:self.tableView) as DataEntryToolbar? {
-
+            
             dataEntryToolbar.toolbarDelegate = self
             return dataEntryToolbar
         } else {
@@ -43,7 +43,7 @@ DataEntryToolbar is a subclass of UIToolbar intended for use as the input access
         `...`
     }
 
-3. To be notified as a user navigates through the table, implement only the methods you need from `DataEntryToolbarDelegate` (will soon be replaced with closures). The methods with a `lastUpdatedTextField` parameter pass in the text field that was navigated away from, in case you need to save it's contents':
+3. To be notified as a user navigates through the table, implement only the methods you need from `DataEntryToolbarDelegate` (will soon be replaced with closures). The methods with a `lastUpdatedTextField` parameter pass in the text field that was navigated away from, in case you need to save it's contents:
 
     func previousButtonTapped(lastActiveTextField: UITextField?) {
         if let textField = lastActiveTextField {
