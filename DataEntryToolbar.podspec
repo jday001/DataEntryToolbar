@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "jeff" => "jday@jdayapps.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DataEntryToolbar.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/jday001/DataEntryToolbar.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/jday001'
 
   s.platform     = :ios, '7.0'
