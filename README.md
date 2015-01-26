@@ -11,7 +11,7 @@ DataEntryToolbar is a subclass of UIToolbar intended for use as the input access
 ## Example Setup
 
 
-Create an instance of `DataEntryToolbar` in your `TableViewController` subclass:
+Create an instance of `DataEntryToolbar` in your `TableViewController` subclass. Be sure to provide your tableView in the initializer:
 
 ```swift
 private lazy var dataEntryToolbar: DataEntryToolbar? = {
