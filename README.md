@@ -1,6 +1,6 @@
 # DataEntryToolbar
 
-[![CI Status](http://img.shields.io/travis/jeff/DataEntryToolbar.svg?style=flat)](https://travis-ci.org/jeff/DataEntryToolbar)
+[![CI Status](http://img.shields.io/travis/jeff/DataEntryToolbar.svg?style=flat)](https://travis-ci.org/jday001/DataEntryToolbar)
 [![Version](https://img.shields.io/cocoapods/v/DataEntryToolbar.svg?style=flat)](http://cocoadocs.org/docsets/DataEntryToolbar)
 [![License](https://img.shields.io/cocoapods/l/DataEntryToolbar.svg?style=flat)](http://cocoadocs.org/docsets/DataEntryToolbar)
 [![Platform](https://img.shields.io/cocoapods/p/DataEntryToolbar.svg?style=flat)](http://cocoadocs.org/docsets/DataEntryToolbar)
@@ -16,7 +16,7 @@ Create an instance of `DataEntryToolbar` in your `TableViewController` subclass:
 ```swift
 private lazy var dataEntryToolbar: DataEntryToolbar? = {
     if let dataEntryToolbar = DataEntryToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 44), 
-table:self.tableView) as DataEntryToolbar? {
+        table:self.tableView) as DataEntryToolbar? {
             
         dataEntryToolbar.toolbarDelegate = self
         return dataEntryToolbar
@@ -31,7 +31,7 @@ In `cellForRowAtIndexPath`, set a `DataEntryToolbar` instance as the `inputAcces
 
 ```swift
 override func tableView(tableView: UITableView, cellForRowAtIndexPath 
-indexPath: NSIndexPath) -> UITableViewCell {
+    indexPath: NSIndexPath) -> UITableViewCell {
 
     switch (indexPath.section) {
 
@@ -40,7 +40,7 @@ indexPath: NSIndexPath) -> UITableViewCell {
         switch (indexPath.row) {
         case 0:
             let nameCell = tableView.dequeueReusableCellWithIdentifier("NameCell", 
-forIndexPath: indexPath) as JDCustomTextFieldCell
+                forIndexPath: indexPath) as JDCustomTextFieldCell
             nameCell.textField.inputAccessoryView = self.dataEntryToolbar
             self.dataEntryToolbar?.tableTextFields[indexPath] = nameCell.textField
             nameCell.textField.text = self.textFieldData[indexPath]
