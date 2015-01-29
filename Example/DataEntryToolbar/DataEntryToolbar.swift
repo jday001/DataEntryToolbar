@@ -13,7 +13,7 @@ import UIKit
     To set up:
         - Set a DataEntryToolbar instance as the inputAccessoryView of textFields you want to control
         - Add textFields to `tableTextFields` in cellForRowAtIndexPath, using the textField's cell's indexPath as a key
-        - If you want to be notified when a user taps one of the navigation buttons, implement the necessary `toolbarDelegate` methods
+        - If you want to be notified when a user taps one of the navigation buttons, implement the appropriate didTap... closures
         - The look and feel of the toolbar and its buttons can be customized as you would with any toolbar (i.e. barStyle, barTintColor, or button tintColor properties)
 */
 class DataEntryToolbar: UIToolbar {
@@ -26,6 +26,22 @@ class DataEntryToolbar: UIToolbar {
     enum ToolbarTraversalDirection: Int {
         case Next = 0, Previous, Done
     }
+    
+    
+    // -----------------------------------------
+    // MARK: - Delegate Closures
+    // -----------------------------------------
+    
+    typealias ButtonTapped = () -> ()
+    typealias ButtonTappedFromTextField = (UITextField?) -> ()
+    
+    var didTapPreviousButton: ButtonTapped?
+    var didTapPreviousButtonFromTextField: ButtonTappedFromTextField?
+    var didTapNextButton: ButtonTapped?
+    var didTapNextButtonFromTextField: ButtonTappedFromTextField?
+    var didTapDoneButton: ButtonTapped?
+    var didTapDoneButtonFromTextField: ButtonTappedFromTextField?
+    
     
     // -----------------------------------------
     // MARK: - Internal Class Properties
@@ -45,9 +61,6 @@ class DataEntryToolbar: UIToolbar {
     
     /// The UITableView object for which this toolbar is managing textField navigation.
     var tableView: UITableView?
-    
-    /// A delegate that will be notified when a user navigates through textFields in `tableView` cells using this toolbar.
-    var toolbarDelegate: DataEntryToolbarDelegate?
     
     /// A property holding the direction in which the user is navigating through textFields in `tableView`'s cells.
     var toolbarTraversalDirection: ToolbarTraversalDirection!
@@ -216,13 +229,12 @@ class DataEntryToolbar: UIToolbar {
             }
         }
         
-        // call the delegate method for any further customization
+        // call the closure method for any further customization
         if let textFieldToReturn = lastActiveTextField {
-            self.toolbarDelegate?.previousButtonTapped?(lastActiveTextField)
+            self.didTapPreviousButtonFromTextField?(lastActiveTextField)
         } else {
-            self.toolbarDelegate?.previousButtonTapped?()
+            self.didTapPreviousButton?()
         }
-        
     }
     
     /// Sets the buttonTraversalDirection to .Next, activates the next textField in `tableTextFields`, and calls the delegate's nextButtonTapped method for any custom behavior.
@@ -245,11 +257,11 @@ class DataEntryToolbar: UIToolbar {
             }
         }
         
-        // call the delegate method for any further customization
+        // call the closure method for any further customization
         if let textFieldToReturn = lastActiveTextField {
-            self.toolbarDelegate?.nextButtonTapped?(textFieldToReturn)
+            self.didTapNextButtonFromTextField?(lastActiveTextField)
         } else {
-            self.toolbarDelegate?.nextButtonTapped?()
+            self.didTapNextButton?()
         }
     }
     
@@ -271,51 +283,11 @@ class DataEntryToolbar: UIToolbar {
             }
         }
         
-        // call the delegate method for any further customization
+        // call the closure method for any further customization
         if let textFieldToReturn = lastActiveTextField {
-            self.toolbarDelegate?.doneButtonTapped?(lastActiveTextField)
+            self.didTapNextButtonFromTextField?(lastActiveTextField)
         } else {
-            self.toolbarDelegate?.doneButtonTapped?()
+            self.didTapNextButton?()
         }
     }
-}
-
-// -----------------------------------------
-// MARK: - DataEntryToolbarDelegate Protocol
-// -----------------------------------------
-
-/// A protocol with methods to handle button presses within the toolbar.
-///
-/// View controllers may implement these methods to trigger further activity when cycling through textFields.
-@objc protocol DataEntryToolbarDelegate {
-    
-    /// Notifies the delegate that the Done button was tapped.
-    optional func doneButtonTapped()
-    
-    /**
-    Notifies the delegate that the Done button was tapped.
-    
-    :param: lastActiveTextField The textField that was active when the Done button was tapped.
-    */
-    optional func doneButtonTapped(lastActiveTextField: UITextField?)
-    
-    /// Notifies the delegate that the Previous button was tapped.
-    optional func previousButtonTapped()
-    
-    /**
-    Notifies the delegate that the Previous button was tapped.
-    
-    :param: lastActiveTextField The textField that was active when the Previous button was tapped.
-    */
-    optional func previousButtonTapped(lastActiveTextField: UITextField?)
-    
-    /// Notifies the delegate that the next button was tapped.
-    optional func nextButtonTapped()
-    
-    /**
-    Notifies the delegate that the Next button was tapped.
-    
-    :param: lastActiveTextField The textField that was active when the Next button was tapped.
-    */
-    optional func nextButtonTapped(lastActiveTextField: UITextField?)
 }

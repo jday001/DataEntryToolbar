@@ -18,7 +18,15 @@ private lazy var dataEntryToolbar: DataEntryToolbar? = {
     if let dataEntryToolbar = DataEntryToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 44), 
         table:self.tableView) as DataEntryToolbar? {
             
-        dataEntryToolbar.toolbarDelegate = self
+        // implement closures to be notified when buttons are tapped for additional customization:
+        ...
+        dataEntryToolbar.didTapDoneButtonFromTextField = { (lastActiveTextField) in
+            if let textField = lastActiveTextField {
+                self.textFieldShouldReturn(textField)
+            }
+        }
+        ...
+
         return dataEntryToolbar
     } else {
         return nil
@@ -49,29 +57,6 @@ override func tableView(tableView: UITableView, cellForRowAtIndexPath
         `...`
     }
     `...`
-}
-```
-
-
-To be notified as a user navigates through the table, implement only the methods you need from `DataEntryToolbarDelegate` (will soon be replaced with closures). The methods with a `lastUpdatedTextField` parameter pass in the text field that was navigated away from, in case you need to save it's contents:
-
-```swift
-func previousButtonTapped(lastActiveTextField: UITextField?) {
-    if let textField = lastActiveTextField {
-        self.textFieldShouldReturn(textField)
-    }
-}
-
-func nextButtonTapped(lastActiveTextField: UITextField?) {
-    if let textField = lastActiveTextField {
-        self.textFieldShouldReturn(textField)
-    }
-}
-
-func doneButtonTapped(lastActiveTextField: UITextField?) {
-    if let textField: UITextField! = lastActiveTextField {
-        self.textFieldShouldReturn(textField)
-    }
 }
 ```
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JDDemoTableViewController: UITableViewController, UITextFieldDelegate, DataEntryToolbarDelegate {
+class JDDemoTableViewController: UITableViewController, UITextFieldDelegate {
     
     /// An enum for sections in the tableView.
     enum TableSections: Int {
@@ -35,8 +35,28 @@ class JDDemoTableViewController: UITableViewController, UITextFieldDelegate, Dat
     /// A lazy loaded DataEntryToolbar object to be used as inputAccessoryView for text fields and pickers.
     private lazy var dataEntryToolbar: DataEntryToolbar? = {
         if let dataEntryToolbar = DataEntryToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 44), table:self.tableView) as DataEntryToolbar? {
-            dataEntryToolbar.toolbarDelegate = self
+            
+            // implement closures
+            dataEntryToolbar.didTapPreviousButtonFromTextField = { (lastActiveTextField) in
+                if let textField = lastActiveTextField {
+                    self.textFieldShouldReturn(textField)
+                }
+            }
+            
+            dataEntryToolbar.didTapNextButtonFromTextField = { (lastActiveTextField) in
+                if let textField = lastActiveTextField {
+                    self.textFieldShouldReturn(textField)
+                }
+            }
+            
+            dataEntryToolbar.didTapDoneButtonFromTextField = { (lastActiveTextField) in
+                if let textField = lastActiveTextField {
+                    self.textFieldShouldReturn(textField)
+                }
+            }
+            
             return dataEntryToolbar
+            
         } else {
             return nil
         }
@@ -61,10 +81,10 @@ class JDDemoTableViewController: UITableViewController, UITextFieldDelegate, Dat
     /// Called when a user taps the save button, adding the new thing being entered to wherever. Also clears textFields so another thing can be added.
     @IBAction func save() {
         
+        // TODO: save data from text fields
+        
         // clear out all the textFields
         self.clearTextFieldData()
-        
-        println("Would normally save data from textFields.")
     }
     
     /// Called when a user taps the trash icon, deleting the current info and clearing all textFields.
@@ -351,28 +371,5 @@ class JDDemoTableViewController: UITableViewController, UITextFieldDelegate, Dat
         }
         
         return true
-    }
-    
-    
-    // -----------------------------------------
-    // MARK: - DataEntryToolbarDelegate methods
-    // -----------------------------------------
-    
-    func previousButtonTapped(lastActiveTextField: UITextField?) {
-        if let textField = lastActiveTextField {
-            self.textFieldShouldReturn(textField)
-        }
-    }
-    
-    func nextButtonTapped(lastActiveTextField: UITextField?) {
-        if let textField = lastActiveTextField {
-            self.textFieldShouldReturn(textField)
-        }
-    }
-    
-    func doneButtonTapped(lastActiveTextField: UITextField?) {
-        if let textField: UITextField! = lastActiveTextField {
-            self.textFieldShouldReturn(textField)
-        }
     }
 }
