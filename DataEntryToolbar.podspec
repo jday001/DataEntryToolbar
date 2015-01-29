@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DataEntryToolbar"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "A subclass of UIToolbar used to navigate up and down a dynamic tableView's text fields'."
   s.description      = <<-DESC
 
@@ -9,12 +9,11 @@ Pod::Spec.new do |s|
                     To set up:
                     - Set a `DataEntryToolbar` instance as the inputAccessoryView of `UITextFields` you want to control
                     - Add textFields to `tableTextFields` in cellForRowAtIndexPath, using the textField's cell's indexPath as a key
-                    - If you want to be notified when a user taps one of the navigation buttons, implement the necessary `toolbarDelegate` methods
+                    - If you want to be notified when a user taps one of the navigation buttons, implement the necessary closures
                     - The look and feel of the toolbar and its buttons can be customized as you would with any toolbar (i.e. barStyle, barTintColor, or button tintColor properties)
 
                        DESC
   s.homepage         = "https://github.com/jday001/DataEntryToolbar"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "jeff" => "jday@jdayapps.com" }
   s.source           = { :git => "https://github.com/jday001/DataEntryToolbar.git", :tag => s.version.to_s }
@@ -27,8 +26,4 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'DataEntryToolbar' => ['Pod/Assets/*.png']
   }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
