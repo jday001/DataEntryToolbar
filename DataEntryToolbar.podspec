@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DataEntryToolbar"
-  s.version          = "0.1.3"
+  s.version          = "0.1.4"
   s.summary          = "A subclass of UIToolbar used to navigate up and down a dynamic tableView's text fields'."
   s.description      = <<-DESC
 
@@ -19,10 +19,10 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/jday001/DataEntryToolbar.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/jday001'
 
-  s.platform     = :ios, '7.0'
+  s.ios.deployment_target = "8.0"
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes'
+  s.source_files = 'Pod/Classes/*.swift'
   s.resource_bundles = {
     'DataEntryToolbar' => ['Pod/Assets/*.png']
   }
