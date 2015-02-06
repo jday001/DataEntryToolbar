@@ -25,7 +25,7 @@
 		65FC924B1A75EF72005248E4 /* JDCustomTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC924A1A75EF72005248E4 /* JDCustomTextFieldCell.swift */; };
 		65FC924D1A75F046005248E4 /* JDCustomLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC924C1A75F046005248E4 /* JDCustomLabelCell.swift */; };
 		65FC924F1A75F14B005248E4 /* JDCustomSegConCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC924E1A75F14B005248E4 /* JDCustomSegConCell.swift */; };
-		65FC92511A75F263005248E4 /* DataEntryToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC92501A75F263005248E4 /* DataEntryToolbar.swift */; };
+		65FC92511A75F263005248E4 /* JDDataEntryToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FC92501A75F263005248E4 /* JDDataEntryToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 		65FC924A1A75EF72005248E4 /* JDCustomTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDCustomTextFieldCell.swift; path = Controllers/JDCustomTextFieldCell.swift; sourceTree = "<group>"; };
 		65FC924C1A75F046005248E4 /* JDCustomLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDCustomLabelCell.swift; path = Controllers/JDCustomLabelCell.swift; sourceTree = "<group>"; };
 		65FC924E1A75F14B005248E4 /* JDCustomSegConCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JDCustomSegConCell.swift; path = Controllers/JDCustomSegConCell.swift; sourceTree = "<group>"; };
-		65FC92501A75F263005248E4 /* DataEntryToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryToolbar.swift; sourceTree = "<group>"; };
+		65FC92501A75F263005248E4 /* JDDataEntryToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDDataEntryToolbar.swift; sourceTree = "<group>"; };
 		81AA98E5D081B967A12F77C2 /* Pods-DataEntryToolbar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataEntryToolbar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DataEntryToolbar/Pods-DataEntryToolbar.debug.xcconfig"; sourceTree = "<group>"; };
 		A09F959FD84ACA2DA6AE2CBF /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98A32F114335909608CAF60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F59F195388D20070C39A /* Main.storyboard */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				65FC92501A75F263005248E4 /* DataEntryToolbar.swift */,
+				65FC92501A75F263005248E4 /* JDDataEntryToolbar.swift */,
 			);
 			path = DataEntryToolbar;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 				65FC924F1A75F14B005248E4 /* JDCustomSegConCell.swift in Sources */,
 				65FC924B1A75EF72005248E4 /* JDCustomTextFieldCell.swift in Sources */,
 				65FC92491A75EF55005248E4 /* JDDemoTableViewController.swift in Sources */,
-				65FC92511A75F263005248E4 /* DataEntryToolbar.swift in Sources */,
+				65FC92511A75F263005248E4 /* JDDataEntryToolbar.swift in Sources */,
 				65FC92441A75C86B005248E4 /* JDAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

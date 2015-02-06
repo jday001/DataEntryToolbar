@@ -33,8 +33,8 @@ class JDDemoTableViewController: UITableViewController, UITextFieldDelegate {
     private var textFieldData: [NSIndexPath: String] = [:]
     
     /// A lazy loaded DataEntryToolbar object to be used as inputAccessoryView for text fields and pickers.
-    private lazy var dataEntryToolbar: DataEntryToolbar? = {
-        if let dataEntryToolbar = DataEntryToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 44), table:self.tableView) as DataEntryToolbar? {
+    private lazy var dataEntryToolbar: JDDataEntryToolbar? = {
+        if let dataEntryToolbar = JDDataEntryToolbar(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 44), table:self.tableView) as JDDataEntryToolbar? {
             
             // implement closures
             dataEntryToolbar.didTapPreviousButtonFromTextField = { (lastActiveTextField) in

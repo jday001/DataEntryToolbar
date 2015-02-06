@@ -1,5 +1,5 @@
 //
-//  DataEntryToolbar.swift
+//  JDDataEntryToolbar.swift
 //
 //  Created by Jeff Day on 1/19/15.
 //  Copyright (c) 2015 JDay Apps, LLC. All rights reserved.
@@ -16,7 +16,7 @@ import UIKit
         - If you want to be notified when a user taps one of the navigation buttons, implement the appropriate didTap... closures
         - The look and feel of the toolbar and its buttons can be customized as you would with any toolbar (i.e. barStyle, barTintColor, or button tintColor properties)
 */
-class DataEntryToolbar: UIToolbar {
+class JDDataEntryToolbar: UIToolbar {
     
     /// The direction of the next text field that should become active.
     ///
