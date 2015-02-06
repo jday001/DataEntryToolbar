@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DataEntryToolbar"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "A subclass of UIToolbar used to navigate up and down a dynamic tableView's text fields'."
   s.description      = <<-DESC
 
@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = "https://github.com/jday001/DataEntryToolbar"
   s.license          = 'MIT'
+  s.module_name      = 'DataEntryToolbarPod'
   s.author           = { "jeff" => "jday@jdayapps.com" }
   s.source           = { :git => "https://github.com/jday001/DataEntryToolbar.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/jday001'
