@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65A897721A857C5D00DA63DF /* DataEntryToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 65A897711A857C5D00DA63DF /* DataEntryToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65A897781A857C5D00DA63DF /* DataEntryToolbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A8976C1A857C5D00DA63DF /* DataEntryToolbar.framework */; };
-		65A8977F1A857C5D00DA63DF /* DataEntryToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A8977E1A857C5D00DA63DF /* DataEntryToolbarTests.swift */; };
+		65A897891A857CDF00DA63DF /* DataEntryToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 65A897881A857CDF00DA63DF /* DataEntryToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65A8978D1A857D0600DA63DF /* DataEntryToolbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A8978C1A857D0600DA63DF /* DataEntryToolbarTests.swift */; };
+		65A897911A857D2900DA63DF /* DataEntryToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A897901A857D2900DA63DF /* DataEntryToolbar.swift */; };
+		65A898071A85830400DA63DF /* DataEntryToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A897901A857D2900DA63DF /* DataEntryToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +22,31 @@
 			remoteGlobalIDString = 65A8976B1A857C5D00DA63DF;
 			remoteInfo = DataEntryToolbar;
 		};
+		65A898111A8587CB00DA63DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65A8980B1A8587CB00DA63DF /* Toolbar Example.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65A8979B1A857F2000DA63DF;
+			remoteInfo = "Toolbar Example";
+		};
+		65A898131A8587CB00DA63DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65A8980B1A8587CB00DA63DF /* Toolbar Example.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65A897B01A857F2100DA63DF;
+			remoteInfo = "Toolbar ExampleTests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		65A8976C1A857C5D00DA63DF /* DataEntryToolbar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataEntryToolbar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65A897701A857C5D00DA63DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65A897711A857C5D00DA63DF /* DataEntryToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataEntryToolbar.h; sourceTree = "<group>"; };
 		65A897771A857C5D00DA63DF /* DataEntryToolbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataEntryToolbarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65A8977D1A857C5D00DA63DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65A8977E1A857C5D00DA63DF /* DataEntryToolbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEntryToolbarTests.swift; sourceTree = "<group>"; };
+		65A897881A857CDF00DA63DF /* DataEntryToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataEntryToolbar.h; path = Source/DataEntryToolbar.h; sourceTree = SOURCE_ROOT; };
+		65A8978A1A857CE900DA63DF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
+		65A8978C1A857D0600DA63DF /* DataEntryToolbarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataEntryToolbarTests.swift; path = Tests/DataEntryToolbarTests.swift; sourceTree = SOURCE_ROOT; };
+		65A8978E1A857D0E00DA63DF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
+		65A897901A857D2900DA63DF /* DataEntryToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataEntryToolbar.swift; path = Source/DataEntryToolbar.swift; sourceTree = SOURCE_ROOT; };
+		65A8980B1A8587CB00DA63DF /* Toolbar Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Toolbar Example.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +71,10 @@
 		65A897621A857C5D00DA63DF = {
 			isa = PBXGroup;
 			children = (
-				65A8976E1A857C5D00DA63DF /* DataEntryToolbar */,
+				65A8976E1A857C5D00DA63DF /* Source */,
 				65A8977B1A857C5D00DA63DF /* DataEntryToolbarTests */,
 				65A8976D1A857C5D00DA63DF /* Products */,
+				65A8980B1A8587CB00DA63DF /* Toolbar Example.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,19 +87,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		65A8976E1A857C5D00DA63DF /* DataEntryToolbar */ = {
+		65A8976E1A857C5D00DA63DF /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				65A897711A857C5D00DA63DF /* DataEntryToolbar.h */,
+				65A897901A857D2900DA63DF /* DataEntryToolbar.swift */,
+				65A897881A857CDF00DA63DF /* DataEntryToolbar.h */,
 				65A8976F1A857C5D00DA63DF /* Supporting Files */,
 			);
+			name = Source;
 			path = DataEntryToolbar;
 			sourceTree = "<group>";
 		};
 		65A8976F1A857C5D00DA63DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				65A897701A857C5D00DA63DF /* Info.plist */,
+				65A8978A1A857CE900DA63DF /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -88,7 +109,7 @@
 		65A8977B1A857C5D00DA63DF /* DataEntryToolbarTests */ = {
 			isa = PBXGroup;
 			children = (
-				65A8977E1A857C5D00DA63DF /* DataEntryToolbarTests.swift */,
+				65A8978C1A857D0600DA63DF /* DataEntryToolbarTests.swift */,
 				65A8977C1A857C5D00DA63DF /* Supporting Files */,
 			);
 			path = DataEntryToolbarTests;
@@ -97,9 +118,18 @@
 		65A8977C1A857C5D00DA63DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				65A8977D1A857C5D00DA63DF /* Info.plist */,
+				65A8978E1A857D0E00DA63DF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65A8980C1A8587CB00DA63DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65A898121A8587CB00DA63DF /* Toolbar Example.app */,
+				65A898141A8587CB00DA63DF /* Toolbar ExampleTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,7 +139,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65A897721A857C5D00DA63DF /* DataEntryToolbar.h in Headers */,
+				65A897891A857CDF00DA63DF /* DataEntryToolbar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +209,12 @@
 			mainGroup = 65A897621A857C5D00DA63DF;
 			productRefGroup = 65A8976D1A857C5D00DA63DF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 65A8980C1A8587CB00DA63DF /* Products */;
+					ProjectRef = 65A8980B1A8587CB00DA63DF /* Toolbar Example.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				65A8976B1A857C5D00DA63DF /* DataEntryToolbar */,
@@ -186,6 +222,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		65A898121A8587CB00DA63DF /* Toolbar Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Toolbar Example.app";
+			remoteRef = 65A898111A8587CB00DA63DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		65A898141A8587CB00DA63DF /* Toolbar ExampleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Toolbar ExampleTests.xctest";
+			remoteRef = 65A898131A8587CB00DA63DF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		65A8976A1A857C5D00DA63DF /* Resources */ = {
@@ -209,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A898071A85830400DA63DF /* DataEntryToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65A8977F1A857C5D00DA63DF /* DataEntryToolbarTests.swift in Sources */,
+				65A897911A857D2900DA63DF /* DataEntryToolbar.swift in Sources */,
+				65A8978D1A857D0600DA63DF /* DataEntryToolbarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +378,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DataEntryToolbar/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,7 +393,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DataEntryToolbar/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,6 +404,7 @@
 		65A897861A857C5D00DA63DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -357,20 +413,22 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = DataEntryToolbarTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		65A897871A857C5D00DA63DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = DataEntryToolbarTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -395,6 +453,7 @@
 				65A897841A857C5D00DA63DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65A897851A857C5D00DA63DF /* Build configuration list for PBXNativeTarget "DataEntryToolbarTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +462,7 @@
 				65A897871A857C5D00DA63DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
