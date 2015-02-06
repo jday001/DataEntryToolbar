@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DataEntryToolbar"
-  s.version          = "0.2.0"
+  s.version          = "0.2.1"
   s.summary          = "A subclass of UIToolbar used to navigate up and down a dynamic tableView's text fields'."
   s.description      = <<-DESC
 
