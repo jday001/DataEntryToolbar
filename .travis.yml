@@ -13,6 +13,6 @@ install:
 script:
 #- set -o pipefail && xcodebuild test -workspace Example/DataEntryToolbar.xcworkspace -#scheme DataEntryToolbar-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
 #- set -o pipefail && xcodebuild -workspace Example/DataEntryToolbar.xcworkspace -scheme #DataEntryToolbar-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-- xctool -project Toolbar\ Example.xcodeproj -scheme Toolbar\ Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest' ONLY_ACTIVE_ARCH=NO
+- xctool -workspace DataEntryToolbar.xcworkspace -scheme DataEntryToolbar -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest' ONLY_ACTIVE_ARCH=NO
 
 - pod lib lint --quick
